@@ -16,9 +16,9 @@ try:
 except:
     pass
 
-from sqlalchemy import Table, Column, Integer, String, MetaData
-
-engine = create_engine("postgresql+psycopg2://postgres:12345678@127.0.0.1:5432/data_ox")
+username = 'postgres'
+password = '12345678'
+engine = create_engine("postgresql+psycopg2://" + username + ":" + password + "@127.0.0.1:5432/data_ox")
 meta = MetaData()
 
 data_apportmen = Table(
